@@ -1,0 +1,18 @@
+import numpy as np
+import matplotlib.pyplot as plt
+from sympy import*
+
+def F1(x) :
+  y = -x * np.cos(x) + x
+  return y
+
+x = np.linspace( 0, 8*np.pi, 100 )
+y = F1(x)
+
+plt.plot( x, y, '-' )
+plt.xlabel( 'x' )
+plt.ylabel( 'y' )
+plt.title( "f(x) = -x * cos(x) / x" )
+plt.text( 20, 0, 'Copyright@ytl' )
+
+plt.show()

@@ -1,0 +1,23 @@
+import numpy as np
+import matplotlib.pyplot as plt
+import math
+
+def F1( x ) :
+  y = x * np.sin(x)
+  return y
+  
+def F2( x ) :
+  y = ( x**2 ) - ( x**4 / math.factorial( 3 ) ) + ( x**6 / math.factorial(5) ) - ( x**8 / math.factorial(7) )
+  return y
+
+x = np.linspace( -np.pi, np.pi, 100 )
+y1 = F1( x )
+y2 = F2( x )
+
+plt.plot( x, y1, '-', x, y2, '--' )
+plt.xlabel( 'x' )
+plt.ylabel( 'f(x) & g(x)' )
+plt.title( "Plot of Two Function" )
+plt.text( 1, 0, 'Copyright@ytl' )
+
+plt.show()

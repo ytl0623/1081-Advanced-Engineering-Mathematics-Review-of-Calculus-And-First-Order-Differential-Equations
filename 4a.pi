@@ -1,0 +1,19 @@
+import numpy as np
+import matplotlib.pyplot as plt
+from sympy import*
+
+def F1(x) :
+  y = ( -1 + x )
+  return y
+
+x = np.linspace( 0, 1, 100 )
+y = F1(x)
+
+plt.plot( x, y, '-' )
+plt.xlabel( 'x' )
+plt.ylabel( 'y' )
+plt.title( "f(x) = ( -1 + x ) / x" )
+plt.grid
+plt.text( 0.8, -100, 'Copyright@ytl' )
+
+plt.show()

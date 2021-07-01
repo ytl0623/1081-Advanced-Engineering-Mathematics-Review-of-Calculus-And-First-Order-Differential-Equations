@@ -1,0 +1,7 @@
+import numpy as np
+from sympy import*
+
+x = symbols( 'x' )
+expr = x * sin(x)
+
+print( expr.series( x,0,12 ).removeO() )
